@@ -11,7 +11,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
-	protected static final String TAG = MainActivity.class.getSimpleName();
+	public static final String TAG = MainActivity.class.getSimpleName();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

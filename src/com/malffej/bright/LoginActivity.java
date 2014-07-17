@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -31,6 +30,18 @@ public class LoginActivity extends Activity {
 		mPassword = (EditText) findViewById(R.id.loginActivityPasswordEditText);
 		mLoginButton = (Button) findViewById(R.id.loginActivityLoginButton);
 		mSignupTextView = (TextView) findViewById(R.id.loginActivitySignupTextView);
+
+		// Setting onClickListener for SignupTextView to take user to
+		// SignupActivity if clicked (via intent)
+		mSignupTextView.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(LoginActivity.this,
+						SignupActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		// Takes user to MainActivity if a login is successful, and if not then
 		// prompts for an error message

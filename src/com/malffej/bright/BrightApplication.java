@@ -1,10 +1,10 @@
 package com.malffej.bright;
 
 import android.app.Application;
-
 import com.parse.Parse;
 
 public class BrightApplication extends Application {
+	
 	@Override
 	public void onCreate() {
 		super.onCreate();
